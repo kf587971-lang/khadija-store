@@ -1,0 +1,44 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return """
+    <html>
+    <head>
+        <title>Khadija Store</title>
+    </head>
+
+    <body style="font-family:Arial; text-align:center;">
+
+        <h1>🛍️ Khadija Store</h1>
+        <h2>Beautiful Clothes Collection 👗</h2>
+
+        <hr>
+
+        <h3>🌸 Pink Dress</h3>
+        <p>Price: Rs. 2500</p>
+        <button>Add to Cart 🛒</button>
+
+        <hr>
+
+        <h3>💙 Blue Dress</h3>
+        <p>Price: Rs. 3000</p>
+        <button>Add to Cart 🛒</button>
+
+        <hr>
+
+        <h3>🖤 Black Dress</h3>
+        <p>Price: Rs. 2800</p>
+        <button>Add to Cart 🛒</button>
+
+        <hr>
+
+        <p>© 2026 Khadija Store</p>
+
+    </body>
+    </html>
+    """
+
+app.run(host="0.0.0.0", port=5000)
